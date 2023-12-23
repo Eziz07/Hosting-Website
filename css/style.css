@@ -6,6 +6,106 @@
   padding: 0;
 }
 
-h1 {
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  outline: none;
+  padding: none;
+  margin: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.hero-section {
   background-color: #180d5b;
+}
+
+header {
+  background-color: #180d5b;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header img {
+  width: 200px;
+}
+header nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  gap: 50px;
+}
+header nav ul a {
+  color: #fff;
+  position: relative;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+header nav ul a.active::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  bottom: -5px;
+}
+header nav ul a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  bottom: -5px;
+  left: 0;
+}
+header nav ul a:hover::after {
+  width: 100%;
+}
+
+.hero-container {
+  margin-top: 100px;
+  display: flex;
+}
+.hero-container .hero-slogan {
+  outline: 2px solid red;
+  flex: 1;
+}
+.hero-container .hero-slogan h1 {
+  font-size: 60px;
+  color: #fff;
+}
+.hero-container .hero-slogan p {
+  color: #fff;
+}
+.hero-container .hero-image {
+  flex: 2;
+}
+.hero-container .hero-image img {
+  width: 700px;
 }
