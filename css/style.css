@@ -39,14 +39,24 @@ input {
   border: none;
 }
 
-.hero-section {
+.wrapper {
   background-color: #180d5b;
+}
+
+.hero-section {
+  margin-inline: auto;
+  max-width: 1300px;
+  position: relative;
 }
 
 header {
   background-color: #180d5b;
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
+  max-width: 1300px;
+  margin-inline: auto;
   width: 100%;
 }
 header img {
@@ -89,22 +99,47 @@ header nav ul a:hover::after {
 }
 
 .hero-container {
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
 }
 .hero-container .hero-slogan {
-  outline: 2px solid red;
+  margin-top: 70px;
+  padding-right: 70px;
   flex: 1;
 }
 .hero-container .hero-slogan h1 {
-  font-size: 60px;
+  font-size: 65px;
   color: #fff;
 }
 .hero-container .hero-slogan p {
   color: #fff;
+  margin: 50px auto;
+}
+.hero-container .hero-slogan .search {
+  outline: 2px solid #fff;
+  width: max-content;
+  border-radius: 50px;
+  padding: 5px;
+}
+.hero-container .hero-slogan .search input {
+  font-size: 20px;
+  padding: 10px 10px;
+  background-color: transparent;
+  color: #fff;
+}
+.hero-container .hero-slogan .search input::placeholder {
+  color: #fff;
+}
+.hero-container .hero-slogan .search button {
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
 }
 .hero-container .hero-image {
-  flex: 2;
+  flex: 1;
 }
 .hero-container .hero-image img {
   width: 700px;

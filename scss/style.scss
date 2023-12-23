@@ -1,16 +1,24 @@
 @import "reset";
 @import "variables";
 
-.hero-section {
-  // background-image: url("/assets/main.jpg");
-  // background-size: 100%;
-  // background-repeat: no-repeat;
+.wrapper {
   background-color: $primary-color;
 }
+
+.hero-section {
+  margin-inline: auto;
+  max-width: 1300px;
+  position: relative;
+}
+
 header {
   background-color: $primary-color;
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
+  max-width: 1300px;
+  margin-inline: auto;
   width: 100%;
 
   img {
@@ -60,23 +68,51 @@ header {
 }
 
 .hero-container {
-  margin-top: 100px;
+  padding-top: 100px;
   display: flex;
 
   .hero-slogan {
-    outline: 2px solid red;
+    // outline: 2px solid red;
+    margin-top: 70px;
+    padding-right: 70px;
     flex: 1;
 
     h1 {
-      font-size: 60px;
+      font-size: 65px;
       color: $text-color-white;
     }
     p {
       color: $text-color-white;
+      margin: 50px auto;
+    }
+
+    .search {
+      outline: 2px solid $text-color-white;
+      width: max-content;
+      border-radius: 50px;
+      padding: 5px;
+      input {
+        font-size: 20px;
+        padding: 10px 10px;
+        background-color: transparent;
+        color: $text-color-white;
+
+        &::placeholder {
+          color: $text-color-white;
+        }
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 30px;
+        border-radius: 50px;
+        background-color: $text-color-white;
+        color: $text-color-black;
+        cursor: pointer;
+      }
     }
   }
   .hero-image {
-    flex: 2;
+    flex: 1;
 
     img {
       width: 700px;
